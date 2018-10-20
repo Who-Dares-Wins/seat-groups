@@ -78,8 +78,22 @@ class GroupSync extends SeatGroupsJobBase
 
                 //Catch Superuser
                 foreach ($group->roles as $role) {
-                    if ($role->title === 'Superuser') {
-                        $roles->push($role->id);
+                    switch ($role->title) {
+                        case 'Superuser':
+                            $roles->push($role->id);
+                            break;
+
+                        case 'Capital':
+                            $roles->push($role->id);
+                            break;
+
+                        case 'Spec Ops':
+                            $roles->push($role->id);
+                            break;
+
+                        case 'Command':
+                            $roles->push($role->id);
+                            break;
                     }
                 }
 
