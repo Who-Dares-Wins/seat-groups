@@ -94,6 +94,10 @@ class GroupSync extends SeatGroupsJobBase
                         case 'Command':
                             $roles->push($role->id);
                             break;
+
+                        case 'Executor':
+                            $roles->push($role->id);
+                            break;
                     }
                 }
 
